@@ -193,4 +193,3 @@
 		'name' => 'Nom',
 		'time' => 'Temps',
 	];
-?>

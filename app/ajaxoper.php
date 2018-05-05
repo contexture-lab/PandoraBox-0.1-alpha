@@ -1819,8 +1819,8 @@ if ($oper == "list_docs") {
 		} else {
 			$pbconfig .= '$pblng = '.$pblng.'; ';
 		}
-		$pbconfig .= '$setflags = [ "pbtitle" => '.$cpbtitle.', "auhead" => '.$cauhead.', "auinfo" => '.$cauinfo.', "pbsignup" => '.$cpbsignup.', "pbforgot" => '.$cpbforgot.' ]; ';
-		$pbconfig .= ' ?> ';
+		$pbconfig .= '$setflags = [ "pbtitle" => '.$cpbtitle.', "auhead" => '.$cauhead.', "auinfo" => '.$cauinfo.', "pbsignup" => '.$cpbsignup.', "pbforgot" => '.$cpbforgot.' ];';
+
 		file_put_contents('../config.php', $pbconfig);
 		echo 'setTimeout(funcRefresh, 3000);';
 	} catch (Exception $e) {

@@ -14,11 +14,11 @@ if ($is_complite) {
 		$pbconfig .= '$auinfo = '.'"'.$locale['auinfo'].'"; ';
 		$pbconfig .= '$pbaccuracy = '.'30'.'; ';
 		$pbconfig .= '$systimeout = '.'30'.'; ';
-		$pbconfig .= '$pblanguage = "'.'eng'.'"; ';
+		$pbconfig .= '$pblanguage = "'.'en'.'"; ';
 		$pbconfig .= '$pblat = '.'0'.'; ';
 		$pbconfig .= '$pblng = '.'0'.'; ';
-		$pbconfig .= '$setflags = [ "pbtitle" => false, "auhead" => true, "auinfo" => true, "pbsignup" => true, "pbforgot" => true ]; ';
-		$pbconfig .= ' ?> ';
+		$pbconfig .= '$setflags = [ "pbtitle" => false, "auhead" => true, "auinfo" => true, "pbsignup" => true, "pbforgot" => true ];';
+
 		file_put_contents('./config.php', $pbconfig);
 		echo '<li><i class="fa-li fa fa-check" style="color: green;"></i>The configuration is recorded.</li>';
 	} catch (Exception $e) {

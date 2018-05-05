@@ -241,4 +241,3 @@ function getOneKey($arrKeys) {
 	$returnvar = $arrKeys[rand(0, $lenarr)];
 	return $returnvar;
 }
-?>

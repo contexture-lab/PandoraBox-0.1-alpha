@@ -7,4 +7,3 @@ if (isset($setup)) {
 } else {
 	require 'install/start.php';
 }
-?>

@@ -1,9 +1,10 @@
 <?php
-require_once "../config.php";
 require 'rb.php';
+session_start();
+
+require_once "../config.php";
 require 'func.php';
 
-session_start();
 $user = $_SESSION['logged_user'];
 
 $dsn = 'mysql:host='.$dbhost.';dbname='.$dbname;
@@ -20,4 +21,3 @@ unset($_SESSION['logged_user']);
 unset($_SESSION['pb_intrface']);
 
 header("Location: http://".$_SERVER['HTTP_HOST']."/");
-?>

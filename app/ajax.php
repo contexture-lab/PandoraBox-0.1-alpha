@@ -2,14 +2,14 @@
 extract($_POST, EXTR_SKIP);
 extract($_GET, EXTR_SKIP);
 
-require_once "../config.php";
 require 'rb.php';
+session_start();
+
+require "../config.php";
 require 'func.php';
 require '../lang/arrlangs.php';
 $langreq = "../lang/".$pblanguage.".php";
-require $langreq;
-
-session_start();
+include $langreq;
 
 $dsn = 'mysql:host='.$dbhost.';dbname='.$dbname;
 R::setup( $dsn, $dblogin, $dbpassword );
@@ -41,4 +41,3 @@ if ($isConnected) {
 } else {
 	echo $locale['unable_to_connect_to_the_database'];
 }
-?>
